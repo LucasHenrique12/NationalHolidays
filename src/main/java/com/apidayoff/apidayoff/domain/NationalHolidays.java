@@ -7,19 +7,19 @@ import java.util.Objects;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "national")
+@Document(value = "nationalholidays")
 public class NationalHolidays implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
     private String id;
-    private Date date;
+    private String date;
     private String title;
 
     public NationalHolidays() {
     }
 
-    public NationalHolidays(String id, Date date, String title) {
+    public NationalHolidays(String id, String date, String title) {
         this.id = id;
         this.date = date;
         this.title = title;
@@ -33,11 +33,11 @@ public class NationalHolidays implements Serializable {
         this.id = id;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return this.date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

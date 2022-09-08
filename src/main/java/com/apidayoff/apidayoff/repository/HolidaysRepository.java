@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.apidayoff.apidayoff.domain.NationalHolidays;
 
 @Repository
-public interface DateRepository extends MongoRepository<NationalHolidays, String> {
+public interface HolidaysRepository extends MongoRepository<NationalHolidays, String> {
 
 }
